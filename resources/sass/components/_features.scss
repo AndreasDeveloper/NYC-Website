@@ -1,0 +1,47 @@
+/* ------------------------------------------- */
+/* FEATURES
+/* ------------------------------------------- */
+
+.container-2 {
+    display: grid;
+    grid-template-rows: min-content;
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 24rem) [col-end] ) [center-end] minmax(6rem, 1fr) [full-end];
+}
+
+.section-features {
+
+    margin: 15rem 0;
+
+    // GRID SETUP
+    display: grid;
+    grid-column: center-start / center-end;
+    //grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 6rem; // CREATES A GAP BETWEEN THE ELEMENTS IN THE GRID COLS
+    align-items: start;
+}
+
+.feature {
+
+    // GRID SETUP \\
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 2.5rem;
+
+    // ICON SETUP \\
+    &__icon {
+        fill: $color-primary;
+        width: 4.5rem;
+        height: 4.5rem;
+        transform: translateY(-1rem);       // MOVES ICON TO THE TOP (-1rem on Y scale)
+
+        // GRID SETUP FOR ICON \\
+        grid-row: 1 / span 2;
+    }
+
+    // TEXT SETUP \\
+    &__text {
+        font-size: 1.7rem;
+    }
+}

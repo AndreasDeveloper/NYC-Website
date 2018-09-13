@@ -1,0 +1,47 @@
+/* ------------------------------------------- */
+/* HEADER
+/* ------------------------------------------- */
+
+.container-1 {
+    display: grid;
+    grid-template-rows: 80vh;
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) [center-end] minmax(6rem, 1fr) [full-end];
+}
+
+.header {
+    
+    grid-column: full-start / full-end;
+    background-image: linear-gradient(rgba($color-primary-light, .63), rgba($color-primary-dark, .83)), url(../images/nyc-1.jpeg);
+    background-size: cover;
+    background-position: center;
+    padding: 10vh;
+
+    // GRID SETUP \\
+    display: grid;
+    grid-row-gap: 1.5rem;
+    grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+    grid-template-columns: minmax(min-content, max-content);
+    justify-content: center;
+
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-medium) {      
+        padding: 5rem;     
+    }
+
+    @media only screen and (max-width: $bp-small) {    
+        padding-bottom: -50rem;
+    }
+
+    &__heading {
+        color: $color-white;
+        font-size: 7.5rem;
+        font-weight: 300;
+        font-family: 'Josefin Sans';
+        text-transform: uppercase;
+    }
+
+    &__button {
+        align-self: start;
+        justify-self: center;
+    }
+}

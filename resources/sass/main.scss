@@ -1,0 +1,22 @@
+/* ------------------------------------------- */
+/* 7-1 TYPE FOLDER / FILES IMPLEMENTATION
+/* ------------------------------------------- */
+
+/* - ABSTRACTS FOLDER FILES - */
+@import "abstracts/_variables.scss";
+@import "abstracts/_mixins.scss";
+
+/* - BASE FOLDER FILES - */
+@import "base/_typography.scss";
+@import "base/_base.scss";
+@import "base/_utilities.scss";
+
+/* - COMPONENTS FOLDER FILES - */
+@import "components/_features.scss";
+@import "components/_poi.scss";
+
+/* - LAYOUT FOLDER FILES - */
+@import "layout/_header.scss";
+
+/* - PAGES FOLDER FILES - */
+@import "pages/_home.scss";

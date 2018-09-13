@@ -1,0 +1,77 @@
+/* ------------------------------------------- */
+/* PLACES OF INTEREST
+/* ------------------------------------------- */
+
+
+.container-3 {
+    display: grid;
+    grid-template-rows: 80vh;
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 44rem) [col-end] ) [center-end] minmax(6rem, 1fr) [full-end];
+}
+
+/*.section-poi {
+
+    // CSS GRID SETUP \\
+    display: grid;
+    grid-column: center-start / center-end;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 15rem);
+    //grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 6rem; // CREATES A GAP BETWEEN THE ELEMENTS IN THE GRID COLS
+    align-items: start;
+} */
+
+.poi {
+
+    // CSS GRID SETUP \\
+    display: grid;
+    //grid-column: center-start / center-end;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, 5vw);
+    //grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 6rem; // CREATES A GAP BETWEEN THE ELEMENTS IN THE GRID COLS
+    //align-items: start;
+
+    & > * {
+        color: $color-white;
+        font-family: 'Josefin Sans';
+        font-weight: 300;
+        text-align: center;
+    }
+
+    &--1 {
+        background-image: linear-gradient(rgba($color-black, .80), rgba($color-black, .80)), url(../images/nyc-1.jpeg);
+        background-size: cover;
+        background-position: center;
+
+        // GRID \\
+        grid-row: 1 / 6;
+    }
+
+    &--2 {
+        background-image: linear-gradient(rgba($color-black, .80), rgba($color-black, .80)), url(../images/nyc-2.jpeg);
+        background-size: cover;
+        background-position: center;
+
+        // GRID \\
+        grid-row: 1 / 4;
+    }
+
+    &--3 {
+        background-image: linear-gradient(rgba($color-black, .80), rgba($color-black, .80)), url(../images/nyc-3.jpeg);
+        background-size: cover;
+        background-position: center;
+
+        // GRID \\
+        grid-row: 6 / 9;
+    }
+
+    &--4 {
+        background-image: linear-gradient(rgba($color-black, .80), rgba($color-black, .80)), url(../images/nyc-4.jpeg);
+        background-size: cover;
+        background-position: center;
+
+        // GRID \\
+        grid-row: 4 / -1;
+    }
+}

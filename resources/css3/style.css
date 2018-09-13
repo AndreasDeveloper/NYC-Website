@@ -1,0 +1,415 @@
+/* ------------------------------------------- */
+/* 7-1 TYPE FOLDER / FILES IMPLEMENTATION
+/* ------------------------------------------- */
+/* - ABSTRACTS FOLDER FILES - */
+/* ------------------------------------------- */
+/* COLOR VARIABLES
+/* ------------------------------------------- */
+/* GREY SHADES */
+/* B & W */
+/* COLORS FOR SECTIONS BACKGROUNDS */
+/* ------------------------------------------- */
+/* GRID VARIABLES
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* FONT
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* CLAERFIX MIXIN FOR THE GRID
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* MIXIN THAT CENTERS THE ELEMENTS TO VH
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* CENTERS THE BUTTONS
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* MEDIA QUERIES | SHORTCUT VERSION
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* MEDIA QUERY MANAGER
+/* ------------------------------------------- */
+/* // SIZES / DEVICES \\
+    0 - 600px > Phone
+    600 - 900px > Tablet Portrait
+    900 - 1200px > Tablet Landscape
+    [1200 - 18009 is where our normal style apply
+    1800px + >Big Desktop
+
+    1em = 16px - KIM
+*/
+/* // BREAKPOINT NAMES \\
+    $breakpoint argument choices:
+    - phone
+    - tab-port
+    - tab-land
+    - big-desktop
+*/
+/* - BASE FOLDER FILES - */
+/* ------------------------------------------- */
+/* BODY TYPOGRAHPY SETUP
+/* ------------------------------------------- */
+body {
+  font-family: 'Lato', 'Arial', 'sans-serif';
+  font-weight: 400;
+  /*font-size: 16px;*/
+  line-height: 1.7;
+  color: #777; }
+
+/* ------------------------------------------- */
+/* HEADING PRIMARY | TEXT / STYLE H1
+/* ------------------------------------------- */
+.heading-1 {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+  .heading-1--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    /* -- ANIMATION IMPLEMENTATION -- */
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out; }
+    @media (max-width: 37.5em) {
+      .heading-1--main {
+        letter-spacing: 1rem;
+        font-size: 5rem; } }
+  .heading-1--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    /* -- ANIMATION IMPLEMENTATION -- */
+    animation-name: moveInRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-out; }
+    @media (max-width: 37.5em) {
+      .heading-1--sub {
+        letter-spacing: .5rem; } }
+
+/* ------------------------------------------- */
+/* HEADING SECONDARY | TEXT / STYLE H2
+/* ------------------------------------------- */
+.heading-2 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #09383E, #051d20);
+  -webkit-background-clip: text;
+  color: transparent;
+  /*letter-spacing: .2rem;
+    transition: all .2s; */
+  /*
+    &:hover {
+        transform: skewY(2deg);
+    } */ }
+  @media (max-width: 56.25em) {
+    .heading-2 {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-2 {
+      font-size: 2.5rem; } }
+
+/* --------------------------------------------- */
+/* HEADING TERTIARY + PARAGRAPH| TEXT / STYLE H3/P
+/* --------------------------------------------- */
+.heading-3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+  @media (max-width: 37.5em) {
+    .heading-3 {
+      text-align: center; } }
+
+.heading-4 {
+  font-weight: 400;
+  font-size: 1.9rem; }
+  .heading-4--light {
+    color: #f7f7f7; }
+  .heading-4--dark {
+    color: #777; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.section-text {
+  font-size: 2.1rem;
+  text-transform: uppercase;
+  color: #0b454d;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 20% max-content 20%;
+  grid-column-gap: 1.5rem;
+  align-items: center; }
+  .section-text::before, .section-text::after {
+    content: "";
+    height: .1rem;
+    display: block;
+    background-color: currentColor; }
+
+/* ------------------------------------------------ */
+/* HEADING SECONDARY BOX EFFECT | FEATURES SECTION
+/* ------------------------------------------------ */
+.section-features__heading {
+  padding: 1.2rem;
+  transition: all 500ms;
+  position: relative; }
+
+/* ------------------------------------------- */
+/* BASIC SETUP
+/* ------------------------------------------- */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  /* DEFINES WHAT REM IS */
+  font-size: 62.5%;
+  /* Takes 62.5% of the default font size (16px). 100 / 16 = 62.5  */
+  /* || 1rem = 10px; 10px/16px = 62.5% || */ }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+@media (max-width: 56.25em) {
+  body {
+    padding: 0; } }
+
+/* .container {
+        display: grid;
+        grid-template-rows: 80vh min-content 40vw repeat(3, min-content);               
+        grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) [center-end] minmax(6rem, 1fr) [full-end];   
+        // CONTENT WILL BE DISPLAYED (RESPONSIVE) BETWEEN ITS MINIMUM CONTENT AND 1400px 
+        // TWO 1fr's ARE THE EMPTY COLUMNS THAT CENTERS REST OF THE PAGES CONTENT
+        // SIDEBAR-START | SIDEBAR-END is the sidebar option
+        // FULL-START | FULL-END is the content that goes from the begining of the VW to the end of the VW
+        // CENTER-START | CENTER-END is the content that is centered for the VW
+
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-largest) {
+            display: grid;
+            grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);               
+            grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) [center-end] minmax(6rem, 1fr) [full-end];
+        }
+
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-medium) {    
+            display: grid;
+            grid-template-rows: 6rem calc(100vh - 6rem); // USE CALC TO "MERGE" NAVIGATION ON TOP AND HEADER INTO THE ONE SECTION
+        }
+    } */
+/* ---------------------------------------------------------- */
+/* U-CENTER-TEXT CLASS IN ABOUT SECTION | CENTERING THE TEXT
+/* ---------------------------------------------------------- */
+.ct {
+  text-align: center !important; }
+
+/* ---------------------------------------------------------- */
+/* U-MARGIN-BOTTOM-SMALL CLASS IN ABOUT SECTION | POSITION THE TEXT
+/* ---------------------------------------------------------- */
+.-mb-s {
+  margin-bottom: 1.5rem !important; }
+
+/* ---------------------------------------------------------- */
+/* U-MARGIN-BOTTOM-MEDIUM CLASS IN ABOUT SECTION | POSITION THE TEXT
+/* ---------------------------------------------------------- */
+.mb-m {
+  margin-bottom: 4rem !important; }
+  @media (max-width: 56.25em) {
+    .mb-m {
+      margin-bottom: 3rem !important; } }
+
+/* ---------------------------------------------------------- */
+/* U-MARGIN-BOTTOM-BIG CLASS IN ABOUT SECTION | POSITION THE TEXT
+/* ---------------------------------------------------------- */
+.mb-b {
+  margin-bottom: 8rem !important; }
+  @media (max-width: 56.25em) {
+    .mb-b {
+      margin-bottom: 5rem !important; } }
+
+/* ---------------------------------------------------------- */
+/* U-MARGIN-TOP-SMALL CLASS IN TOURS SECTION | POSITION THE TEXT
+/* ---------------------------------------------------------- */
+.mt-s {
+  margin-top: 2rem !important; }
+
+/* ---------------------------------------------------------- */
+/* U-MARGIN-TOP-MEDIUM CLASS IN TOURS SECTION | POSITION THE TEXT
+/* ---------------------------------------------------------- */
+.mt-m {
+  margin-top: 5rem !important; }
+
+/* ---------------------------------------------------------- */
+/* U-MARGIN-TOP-BIG CLASS IN TOURS SECTION | POSITION THE TEXT
+/* ---------------------------------------------------------- */
+.mt-b {
+  margin-top: 8rem !important; }
+
+/* ---------------------------------------------------------- */
+/* U-MARGIN-TOP-HUGE CLASS IN TOURS SECTION | POSITION THE TEXT
+/* ---------------------------------------------------------- */
+.mt-h {
+  margin-top: 10rem !important; }
+
+/* - COMPONENTS FOLDER FILES - */
+/* ------------------------------------------- */
+/* FEATURES
+/* ------------------------------------------- */
+.container-2 {
+  display: grid;
+  grid-template-rows: min-content;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 24rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+
+.section-features {
+  margin: 15rem 0;
+  display: grid;
+  grid-column: center-start / center-end;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 6rem;
+  align-items: start; }
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-row-gap: 1.5rem;
+  grid-column-gap: 2.5rem; }
+  .feature__icon {
+    fill: #0b454d;
+    width: 4.5rem;
+    height: 4.5rem;
+    transform: translateY(-1rem);
+    grid-row: 1 / span 2; }
+  .feature__text {
+    font-size: 1.7rem; }
+
+/* ------------------------------------------- */
+/* PLACES OF INTEREST
+/* ------------------------------------------- */
+.container-3 {
+  display: grid;
+  grid-template-rows: 80vh;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 44rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+
+/*.section-poi {
+
+    // CSS GRID SETUP \\
+    display: grid;
+    grid-column: center-start / center-end;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 15rem);
+    //grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 6rem; // CREATES A GAP BETWEEN THE ELEMENTS IN THE GRID COLS
+    align-items: start;
+} */
+.poi {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(8, 5vw);
+  grid-gap: 6rem; }
+  .poi > * {
+    color: #fff;
+    font-family: 'Josefin Sans';
+    font-weight: 300;
+    text-align: center; }
+  .poi--1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/nyc-1.jpeg);
+    background-size: cover;
+    background-position: center;
+    grid-row: 1 / 6; }
+  .poi--2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/nyc-2.jpeg);
+    background-size: cover;
+    background-position: center;
+    grid-row: 1 / 4; }
+  .poi--3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/nyc-3.jpeg);
+    background-size: cover;
+    background-position: center;
+    grid-row: 6 / 9; }
+  .poi--4 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/nyc-4.jpeg);
+    background-size: cover;
+    background-position: center;
+    grid-row: 4 / -1; }
+
+/* - LAYOUT FOLDER FILES - */
+/* ------------------------------------------- */
+/* HEADER
+/* ------------------------------------------- */
+.container-1 {
+  display: grid;
+  grid-template-rows: 80vh;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+
+.header {
+  grid-column: full-start / full-end;
+  background-image: linear-gradient(rgba(9, 56, 62, 0.63), rgba(5, 29, 32, 0.83)), url(../images/nyc-1.jpeg);
+  background-size: cover;
+  background-position: center;
+  padding: 10vh;
+  display: grid;
+  grid-row-gap: 1.5rem;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+  grid-template-columns: minmax(min-content, max-content);
+  justify-content: center; }
+  @media only screen and (max-width: 50em) {
+    .header {
+      padding: 5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      padding-bottom: -50rem; } }
+  .header__heading {
+    color: #fff;
+    font-size: 7.5rem;
+    font-weight: 300;
+    font-family: 'Josefin Sans';
+    text-transform: uppercase; }
+  .header__button {
+    align-self: start;
+    justify-self: center; }
+
+/* - PAGES FOLDER FILES - */
+/* ------------------------------------------- */
+/* ABOUT US | SECTION | HOME PAGE
+/* ------------------------------------------- */
+.section-about {
+  grid-column: center-start / center-end;
+  display: grid; }
+  .section-about__heading {
+    text-align: center;
+    font-size: 3.5rem;
+    text-transform: uppercase; }
+  .section-about__text {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 2.5rem;
+    text-align: center;
+    padding: 0 5rem; }
+
+/* ------------------------------------------- */
+/* PLACES OF INTEREST | SECTION | HOME PAGE
+/* ------------------------------------------- */
+.section-poi {
+  display: grid;
+  grid-column: center-start / center-end;
+  grid-template-columns: repeat(auto-fit, minmax(60rem, 1fr)); }

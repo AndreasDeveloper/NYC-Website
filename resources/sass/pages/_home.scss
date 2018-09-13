@@ -1,0 +1,37 @@
+/* ------------------------------------------- */
+/* ABOUT US | SECTION | HOME PAGE
+/* ------------------------------------------- */
+
+.section-about {
+
+    grid-column: center-start / center-end;
+
+    // GRID SETUP \\
+    display: grid;
+
+    &__heading {
+        text-align: center;
+        font-size: 3.5rem;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        display: grid;
+        grid-template-columns: 1fr max-content;
+        grid-row-gap: 1.5rem;
+        grid-column-gap: 2.5rem;
+        text-align: center;
+        padding: 0 5rem;
+    }
+}
+
+/* ------------------------------------------- */
+/* PLACES OF INTEREST | SECTION | HOME PAGE
+/* ------------------------------------------- */
+
+.section-poi {
+    display: grid;
+    grid-column: center-start / center-end;
+    grid-template-columns: repeat(auto-fit, minmax(60rem, 1fr));
+
+}
