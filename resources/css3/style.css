@@ -325,31 +325,79 @@ html {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(8, 5vw);
   grid-gap: 6rem; }
+  @media only screen and (max-width: 37.5em) {
+    .poi {
+      grid-template-rows: repeat(24, 5vw); } }
   .poi > * {
     color: #fff;
     font-family: 'Josefin Sans';
     font-weight: 300;
-    text-align: center; }
+    text-align: center;
+    box-shadow: 0rem 0.3rem 2rem rgba(0, 0, 0, 0.8); }
   .poi--1 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/nyc-1.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/nyc-5.jpg);
     background-size: cover;
     background-position: center;
-    grid-row: 1 / 6; }
+    display: grid;
+    grid-row: 1 / 6;
+    grid-template-rows: repeat(8, 5vw); }
+    .poi--1__heading {
+      font-size: 2.5rem; }
+    .poi--1__content {
+      grid-row: 4 / 5;
+      justify-self: center;
+      align-self: center; }
+    @media only screen and (max-width: 37.5em) {
+      .poi--1 {
+        grid-row: 1 / 6; } }
   .poi--2 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/nyc-2.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/nyc-6.jpeg);
     background-size: cover;
     background-position: center;
-    grid-row: 1 / 4; }
+    display: grid;
+    grid-row: 1 / 4;
+    grid-template-rows: repeat(4, 5vw); }
+    .poi--2__heading {
+      font-size: 2.5rem; }
+    .poi--2__content {
+      grid-row: 3 / 4;
+      justify-self: center;
+      align-self: center; }
+    @media only screen and (max-width: 37.5em) {
+      .poi--2 {
+        grid-row: 6 / 12; } }
   .poi--3 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/nyc-3.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/nyc-7.jpg);
     background-size: cover;
     background-position: center;
-    grid-row: 6 / 9; }
+    display: grid;
+    grid-row: 6 / 9;
+    grid-template-rows: repeat(4, 5vw); }
+    .poi--3__heading {
+      font-size: 2.5rem; }
+    .poi--3__content {
+      grid-row: 3 / 4;
+      justify-self: center;
+      align-self: center; }
+    @media only screen and (max-width: 37.5em) {
+      .poi--3 {
+        grid-row: 12 / 18; } }
   .poi--4 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/nyc-4.jpeg);
     background-size: cover;
     background-position: center;
-    grid-row: 4 / -1; }
+    display: grid;
+    grid-row: 4 / -1;
+    grid-template-rows: repeat(8, 5vw); }
+    .poi--4__heading {
+      font-size: 2.5rem; }
+    .poi--4__content {
+      grid-row: 4 / 5;
+      justify-self: center;
+      align-self: center; }
+    @media only screen and (max-width: 37.5em) {
+      .poi--4 {
+        grid-row: 18 / 24; } }
 
 /* - LAYOUT FOLDER FILES - */
 /* ------------------------------------------- */
@@ -386,6 +434,139 @@ html {
   .header__button {
     align-self: start;
     justify-self: center; }
+
+/* ------------------------------------------- */
+/* NAVIGATION
+/* ------------------------------------------- */
+.navigation__checkbox {
+  display: none; }
+
+.navigation__button {
+  background-color: #fff;
+  height: 7rem;
+  width: 7rem;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  border-radius: 50%;
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer; }
+  @media (max-width: 56.25em) {
+    .navigation__button {
+      top: 4rem;
+      right: 4rem; } }
+  @media (max-width: 37.5em) {
+    .navigation__button {
+      top: 3.5rem;
+      right: 3.5rem; } }
+
+.navigation__background {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  background-image: radial-gradient(#09383E, #051d20);
+  z-index: 1000;
+  -webkit-transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
+  @media (max-width: 56.25em) {
+    .navigation__background {
+      top: 4.5rem;
+      right: 4.5rem; } }
+  @media (max-width: 37.5em) {
+    .navigation__background {
+      top: 3.5rem;
+      right: 3.5rem; } }
+
+.navigation__nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1500;
+  opacity: 0;
+  width: 0;
+  -webkit-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.8s all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+
+.navigation__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+  width: 100%; }
+
+.navigation__item {
+  margin: 1rem; }
+
+.navigation__link:link, .navigation__link:visited {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 1rem 2rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+  background-size: 228%;
+  transition: all .4s; }
+
+.navigation__link:hover, .navigation__link:active {
+  background-position: 100%;
+  color: #0b454d;
+  transform: translateX(1rem); }
+
+.navigation__span-num {
+  margin-right: 1.5rem;
+  display: inline-block; }
+
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(80); }
+
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+  width: 100%; }
+
+.navigation__icon {
+  position: relative;
+  margin-top: 3.5rem; }
+  .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+    width: 3rem;
+    height: 2px;
+    background-color: #333;
+    display: inline-block; }
+  .navigation__icon::before, .navigation__icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all .2s; }
+  .navigation__icon::before {
+    top: -.8rem; }
+  .navigation__icon::after {
+    top: .8rem; }
+
+.navigation__button:hover .navigation__icon::before {
+  top: -1rem; }
+
+.navigation__button:hover .navigation__icon::after {
+  top: 1rem; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon {
+  background-color: transparent; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+  top: 0;
+  transform: rotate(45deg); }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+  top: 0;
+  transform: rotate(-45deg); }
 
 /* - PAGES FOLDER FILES - */
 /* ------------------------------------------- */

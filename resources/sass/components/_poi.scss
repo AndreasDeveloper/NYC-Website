@@ -30,40 +30,98 @@
     grid-template-rows: repeat(8, 5vw);
     //grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-gap: 6rem; // CREATES A GAP BETWEEN THE ELEMENTS IN THE GRID COLS
-    //align-items: start;
+
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-small) {
+        grid-template-rows: repeat(24, 5vw);
+        //justify-content: center;
+        //align-content: center;
+    }
 
     & > * {
         color: $color-white;
         font-family: 'Josefin Sans';
         font-weight: 300;
         text-align: center;
+        box-shadow: 0rem .3rem 2rem rgba($color-black, .80);
     }
 
     &--1 {
-        background-image: linear-gradient(rgba($color-black, .80), rgba($color-black, .80)), url(../images/nyc-1.jpeg);
+        background-image: linear-gradient(rgba($color-black, .80), rgba($color-black, .80)), url(../images/nyc-5.jpg);
         background-size: cover;
         background-position: center;
 
         // GRID \\
-        grid-row: 1 / 6;
+        display: grid;
+        grid-row: 1 / 6;    // POSITONS THE BOX
+        grid-template-rows: repeat(8, 5vw);
+
+        &__heading {
+            font-size: 2.5rem;
+        }
+
+        &__content {
+            grid-row: 4 / 5;
+            justify-self: center;
+            align-self: center;
+        }
+
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-small) {
+            grid-row: 1 / 6;
+        }
     }
 
     &--2 {
-        background-image: linear-gradient(rgba($color-black, .80), rgba($color-black, .80)), url(../images/nyc-2.jpeg);
+        background-image: linear-gradient(rgba($color-black, .80), rgba($color-black, .80)), url(../images/nyc-6.jpeg);
         background-size: cover;
         background-position: center;
 
         // GRID \\
-        grid-row: 1 / 4;
+        display: grid;
+        grid-row: 1 / 4;    // POSITONS THE BOX
+        grid-template-rows: repeat(4, 5vw);
+
+        &__heading {
+            font-size: 2.5rem;
+        }
+
+        &__content {
+            grid-row: 3 / 4;
+            justify-self: center;
+            align-self: center;
+        }
+
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-small) {
+            grid-row: 6 / 12;
+        }
     }
 
     &--3 {
-        background-image: linear-gradient(rgba($color-black, .80), rgba($color-black, .80)), url(../images/nyc-3.jpeg);
+        background-image: linear-gradient(rgba($color-black, .80), rgba($color-black, .80)), url(../images/nyc-7.jpg);
         background-size: cover;
         background-position: center;
 
         // GRID \\
-        grid-row: 6 / 9;
+        display: grid;
+        grid-row: 6 / 9;    // POSITONS THE BOX
+        grid-template-rows: repeat(4, 5vw);
+
+        &__heading {
+            font-size: 2.5rem;
+        }
+
+        &__content {
+            grid-row: 3 / 4;
+            justify-self: center;
+            align-self: center;
+        }
+
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-small) {
+            grid-row: 12 / 18;
+        }
     }
 
     &--4 {
@@ -72,6 +130,23 @@
         background-position: center;
 
         // GRID \\
-        grid-row: 4 / -1;
+        display: grid;
+        grid-row: 4 / -1;   // POSITONS THE BOX
+        grid-template-rows: repeat(8, 5vw);
+
+        &__heading {
+            font-size: 2.5rem;
+        }
+
+        &__content {
+            grid-row: 4 / 5;
+            justify-self: center;
+            align-self: center;
+        }
+
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-small) {
+            grid-row: 18 / 24;
+        }
     }
 }
