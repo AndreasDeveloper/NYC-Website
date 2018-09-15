@@ -135,10 +135,17 @@ body {
         content: "";
         height: .1rem;
         display: block;
-        background-color: currentColor;     // COLOR GREY LIGHT 2
+        background-color: currentColor;
     }
 
     // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-columns: 10% max-content 10%;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: 5% max-content 5%;
+    }
 
 }
 

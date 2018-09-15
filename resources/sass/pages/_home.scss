@@ -35,3 +35,13 @@
     grid-template-columns: repeat(auto-fit, minmax(60rem, 1fr));
 
 }
+
+/* ----------------------------------------------------- */
+/* MISCELLANEOUS PLACES OF INTEREST | SECTION | HOME PAGE
+/* ----------------------------------------------------- */
+
+.section-m-poi {
+    display: grid;
+    grid-column: center-start / center-end;
+    grid-template-columns: repeat(auto-fit, minmax(60rem, 1fr));
+}

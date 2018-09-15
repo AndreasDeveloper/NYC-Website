@@ -1,51 +1,26 @@
 /* ------------------------------------------- */
-/* PLACES OF INTEREST
+/* MISCELLANEOUS PLACES OF INTEREST
 /* ------------------------------------------- */
 
-.container-3 {
+.container-4 {
     display: grid;
-    grid-template-rows: 80vh;
+    grid-template-rows: 30vh;
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) [center-end] minmax(6rem, 1fr) [full-end];
+} 
 
-    margin-bottom: 45rem;
-
-    // * --- MEDIA QUERIES --- * \\
-    @media only screen and (max-width: $bp-medium) {
-        margin-bottom: -10rem;
-    }
-
-    @media only screen and (max-width: $bp-small) {
-        margin-bottom: 135rem;
-    }
-}
-
-/*.section-poi {
-
-    // CSS GRID SETUP \\
+.m-poi {
     display: grid;
-    grid-column: center-start / center-end;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 15rem);
-    //grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    grid-gap: 6rem; // CREATES A GAP BETWEEN THE ELEMENTS IN THE GRID COLS
-    align-items: start;
-} */
-
-.poi {
-
-    // CSS GRID SETUP \\
-    display: grid;
-    //grid-column: center-start / center-end;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(8, 5vw);
-    grid-gap: 6rem; // CREATES A GAP BETWEEN THE ELEMENTS IN THE GRID COLS
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(2, 5vw);
+    justify-content: start;
+    grid-gap: 6rem;
 
     // * --- MEDIA QUERIES --- * \\
     @media only screen and (max-width: $bp-small) {
-        grid-template-columns: repat(16, 1fr);
-        grid-template-rows: repeat(24, 5vw);
+        grid-template-rows: repeat(2, 5vw);
+        grid-template-columns: repeat(18, 1fr);
     }
-
+    
     & > * {
         color: $color-white;
         font-family: 'Josefin Sans';
@@ -55,15 +30,15 @@
     }
 
     &--1 {
-        background-image: linear-gradient(rgba($color-black, .80), rgba($color-black, .80)), url(../images/nyc-5.jpg);
+        background-image: linear-gradient(rgba($color-black, .80), rgba($color-black, .80)), url(../images/eat.jpeg);
         background-size: cover;
         background-position: center;
 
         // GRID \\
         display: grid;
-        grid-row: 1 / 6;    // POSITONS THE BOX
-        grid-column: 1 / 10;
-        grid-template-rows: repeat(16, 5vw);
+        grid-row: 1 / 3;    // POSITONS THE BOX
+        grid-column: 1 / 7;
+        //grid-template-rows: repeat(16, 5vw);
 
         &__heading {
             font-size: 2.5rem;
@@ -76,8 +51,8 @@
 
             // * --- MEDIA QUERIES --- * \\
             @media only screen and (max-width: $bp-small) {
-                padding-top: 5rem;
-                grid-row: 6 / 7;
+                justify-self: center;
+                align-self: start;
             }
         }
 
@@ -98,18 +73,25 @@
         @media only screen and (max-width: $bp-vsmall-2) {
             grid-column: 1 / 7;
         }
+
     }
 
     &--2 {
-        background-image: linear-gradient(rgba($color-black, .80), rgba($color-black, .80)), url(../images/nyc-6.jpeg);
+        background-image: linear-gradient(rgba($color-black, .80), rgba($color-black, .80)), url(../images/shop.jpeg);
         background-size: cover;
         background-position: center;
 
         // GRID \\
         display: grid;
-        grid-row: 1 / 4;    // POSITONS THE BOX
-        grid-column: 10 / 17;
-        grid-template-rows: repeat(4, 5vw);
+        grid-row: 1 / 3;    // POSITONS THE BOX
+        grid-column: 7 / 13;
+        //grid-template-rows: repeat(4, 5vw);
+
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-small) {
+            grid-row: 6 / 11;
+            grid-column: 1 / -1;
+        }
 
         &__heading {
             font-size: 2.5rem;
@@ -122,8 +104,8 @@
 
             // * --- MEDIA QUERIES --- * \\
             @media only screen and (max-width: $bp-small) {
-                padding-top: 15rem;
-                grid-row: 6 / 7;
+                justify-self: center;
+                align-self: start;
             }
         }
 
@@ -131,7 +113,6 @@
         @media only screen and (max-width: $bp-small) {
             grid-row: 6 / 12;
             grid-column: 1 / 12;
-            grid-template-rows: repeat(8, 5vw);
         }
 
         @media only screen and (max-width: $bp-vsmall) {
@@ -144,15 +125,21 @@
     }
 
     &--3 {
-        background-image: linear-gradient(rgba($color-black, .80), rgba($color-black, .80)), url(../images/nyc-7.jpg);
+        background-image: linear-gradient(rgba($color-black, .80), rgba($color-black, .80)), url(../images/relax.jpg);
         background-size: cover;
         background-position: center;
 
         // GRID \\
         display: grid;
-        grid-row: 6 / 9;    // POSITONS THE BOX
-        grid-column: 1 / 10;
-        grid-template-rows: repeat(4, 5vw);
+        grid-row: 1 / 3;    // POSITONS THE BOX
+        grid-column: 13 / 19;
+        //grid-template-rows: repeat(4, 5vw);
+
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-small) {
+            grid-row: 11 / 16;
+            grid-column: 1 / -1;
+        }
 
         &__heading {
             font-size: 2.5rem;
@@ -165,57 +152,14 @@
 
             // * --- MEDIA QUERIES --- * \\
             @media only screen and (max-width: $bp-small) {
-                padding-top: 15rem;
-                grid-row: 6 / 7;
+                justify-self: center;
+                align-self: start;
             }
         }
 
         // * --- MEDIA QUERIES --- * \\
         @media only screen and (max-width: $bp-small) {
             grid-row: 12 / 18;
-            grid-column: 1 / 12;
-            grid-template-rows: repeat(8, 5vw);
-        }
-
-        @media only screen and (max-width: $bp-vsmall) {
-            grid-column: 2 / 9;
-        }
-
-        @media only screen and (max-width: $bp-vsmall-2) {
-            grid-column: 1 / 7;
-        }
-    }
-
-    &--4 {
-        background-image: linear-gradient(rgba($color-black, .80), rgba($color-black, .80)), url(../images/nyc-4.jpeg);
-        background-size: cover;
-        background-position: center;
-
-        // GRID \\
-        display: grid;
-        grid-row: 4 / -1;   // POSITONS THE BOX
-        grid-column: 10 / 17;
-        grid-template-rows: repeat(8, 5vw);
-
-        &__heading {
-            font-size: 2.5rem;
-        }
-
-        &__content {
-            grid-row: 4 / 5;
-            justify-self: center;
-            align-self: center;
-
-            // * --- MEDIA QUERIES --- * \\
-            @media only screen and (max-width: $bp-small) {
-                padding-top: 15rem;
-                grid-row: 6 / 7;
-            }
-        }
-
-        // * --- MEDIA QUERIES --- * \\
-        @media only screen and (max-width: $bp-small) {
-            grid-row: 18 / 24;
             grid-column: 1 / 12;
         }
 
