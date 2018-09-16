@@ -35,3 +35,44 @@
         left: 1rem;
     }
 }
+
+/* ------------------------------------------- */
+/* BUTTON EXPLORE | HEADER
+/* ------------------------------------------- */
+
+.btn {
+    position: relative;
+    display: inline-block;
+    color: $color-white;
+    font-size: 1.4rem;
+    font-family: 'Josefin Sans';
+    text-decoration: none;
+    margin: 3rem 0;
+    border: .2rem solid $color-primary;
+    padding: 1.5rem 6rem;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+.btn::before {
+    content: "";
+    background: $color-primary;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.6s ease;
+    z-index: -1;
+}
+
+// * --- BUTTON EXPLORE --- * \\
+.btn-explore::before {
+    width: 100%;
+    height: 0;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.btn-explore:hover::before {
+   height: 360%;
+}

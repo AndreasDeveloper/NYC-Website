@@ -14,7 +14,9 @@
     background-image: linear-gradient(rgba($color-primary-light, .63), rgba($color-primary-dark, .83)), url(../images/nyc-1.jpeg);
     background-size: cover;
     background-position: center;
-    padding: 10vh;
+    background-attachment: fixed;
+    padding: 20vh;
+    z-index: 2; // Z-INDEX NEEDED IN ORDER FOR BUTTON TO WORK
 
     // GRID SETUP \\
     display: grid;
@@ -25,11 +27,11 @@
 
     // * --- MEDIA QUERIES --- * \\
     @media only screen and (max-width: $bp-medium) {      
-        padding: 5rem;     
+        grid-column: 1 / -1;        
     }
 
     @media only screen and (max-width: $bp-small) {    
-        padding-bottom: -50rem;
+        padding: 5rem;    
     }
 
     &__heading {
@@ -39,10 +41,15 @@
         font-family: 'Josefin Sans';
         text-transform: uppercase;
         text-align: center;
+
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-small) {
+            font-size: 4.5rem;
+        }
     }
 
     &__button {
-        align-self: start;
         justify-self: center;
+        margin-left: 2.5rem;
     }
 }
