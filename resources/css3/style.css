@@ -698,7 +698,8 @@ html {
 .container-5 {
   display: grid;
   grid-template-rows: 80vh;
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  margin-bottom: -5rem; }
   @media only screen and (max-width: 62.5em) {
     .container-5 {
       margin-bottom: -20rem; } }
@@ -1047,6 +1048,43 @@ html {
 
 /* - LAYOUT FOLDER FILES - */
 /* ------------------------------------------- */
+/* FOOTER
+/* ------------------------------------------- */
+.container-6 {
+  display: grid;
+  grid-template-rows: min-content;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+
+.footer {
+  background-color: #051d20;
+  grid-column: full-start / full-end;
+  padding: 8rem; }
+  .footer__list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: 2rem;
+    align-items: center; }
+  .footer__link:link, .footer__link:visited {
+    font-size: 1.4rem;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Josefin Sans';
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1.5rem;
+    display: block;
+    transition: all .2s; }
+  .footer__link:hover, .footer__link:active {
+    background-color: rgba(255, 255, 255, 0.05);
+    transform: translateY(-0.3rem); }
+  .footer__copyright {
+    font-size: 1.4rem;
+    color: #eee;
+    margin-top: 6rem;
+    text-align: center; }
+
+/* ------------------------------------------- */
 /* HEADER
 /* ------------------------------------------- */
 .container-1 {
@@ -1056,7 +1094,7 @@ html {
 
 .header {
   grid-column: full-start / full-end;
-  background-image: linear-gradient(rgba(9, 56, 62, 0.63), rgba(5, 29, 32, 0.83)), url(../images/nyc-1.jpeg);
+  background-image: linear-gradient(rgba(9, 56, 62, 0.63), rgba(5, 29, 32, 0.83)), url(../images/header.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
