@@ -1,0 +1,20 @@
+/* ------------------------------------------- */
+/* GOOGLE MAPS BOX
+/* ------------------------------------------- */
+
+.section-map {
+    
+}
+
+.map-box {
+    width: 100%;
+    height: 60rem;  // NEEDS TO BE IN PX or REM
+    position: relative;
+}
+
+.map {
+    width: 100%;
+    height: 60rem;  // NEEDS TO BE IN PX or REM
+    position: relative;
+    z-index: 999;
+}

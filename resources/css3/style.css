@@ -396,6 +396,20 @@ html {
     font-size: 1.7rem; }
 
 /* ------------------------------------------- */
+/* GOOGLE MAPS BOX
+/* ------------------------------------------- */
+.map-box {
+  width: 100%;
+  height: 60rem;
+  position: relative; }
+
+.map {
+  width: 100%;
+  height: 60rem;
+  position: relative;
+  z-index: 999; }
+
+/* ------------------------------------------- */
 /* PLACES OF INTEREST
 /* ------------------------------------------- */
 .container-3 {
