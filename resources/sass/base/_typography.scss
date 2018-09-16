@@ -122,6 +122,7 @@ body {
 .section-text {
     font-size: 2.1rem;
     text-transform: uppercase;
+    letter-spacing: .3rem;
     color: $color-primary;
     justify-content: center;
 
@@ -145,6 +146,10 @@ body {
 
     @media only screen and (max-width: $bp-small) {
         grid-template-columns: 5% max-content 5%;
+    }
+
+    @media only screen and (max-width: $bp-vsmall-2) {
+        grid-template-columns: 1% max-content 1%;
     }
 
 }
