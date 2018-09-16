@@ -34,7 +34,7 @@
 .rev-block-2 span {
     opacity: 0;
     animation: appear-text 0.0001s linear forwards;
-    animation-delay: 1.4s;
+    animation-delay: 2.4s;
 }
 
 .rev-block-2::after {
@@ -46,7 +46,7 @@
     height: 100%;
     background: $color-primary;
     animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-    animation-delay: 1s;
+    animation-delay: 2s;
 }
 
 // --- REV BLOCK 3 --- \\
@@ -58,7 +58,7 @@
 .rev-block-3 span {
     opacity: 0;
     animation: appear-text 0.0001s linear forwards;
-    animation-delay: 1.4s;
+    animation-delay: 3.4s;
 }
 
 .rev-block-3::after {
@@ -70,7 +70,7 @@
     height: 100%;
     background: $color-primary;
     animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-    animation-delay: 1s;
+    animation-delay: 3s;
 }
 
 // --- REV BLOCK 4 --- \\
@@ -82,7 +82,7 @@
 .rev-block-4 span {
     opacity: 0;
     animation: appear-text 0.0001s linear forwards;
-    animation-delay: 1.4s;
+    animation-delay: 4.4s;
 }
 
 .rev-block-4::after {
@@ -94,5 +94,5 @@
     height: 100%;
     background: $color-primary;
     animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-    animation-delay: 1s;
+    animation-delay: 4s;
 }

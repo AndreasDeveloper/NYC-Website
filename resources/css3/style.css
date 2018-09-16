@@ -962,7 +962,7 @@ html {
 .rev-block-2 span {
   opacity: 0;
   animation: appear-text 0.0001s linear forwards;
-  animation-delay: 1.4s; }
+  animation-delay: 2.4s; }
 
 .rev-block-2::after {
   content: "";
@@ -973,7 +973,7 @@ html {
   height: 100%;
   background: #0b454d;
   animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-  animation-delay: 1s; }
+  animation-delay: 2s; }
 
 .rev-block-3 {
   position: relative; }
@@ -981,7 +981,7 @@ html {
 .rev-block-3 span {
   opacity: 0;
   animation: appear-text 0.0001s linear forwards;
-  animation-delay: 1.4s; }
+  animation-delay: 3.4s; }
 
 .rev-block-3::after {
   content: "";
@@ -992,7 +992,7 @@ html {
   height: 100%;
   background: #0b454d;
   animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-  animation-delay: 1s; }
+  animation-delay: 3s; }
 
 .rev-block-4 {
   position: relative; }
@@ -1000,7 +1000,7 @@ html {
 .rev-block-4 span {
   opacity: 0;
   animation: appear-text 0.0001s linear forwards;
-  animation-delay: 1.4s; }
+  animation-delay: 4.4s; }
 
 .rev-block-4::after {
   content: "";
@@ -1011,7 +1011,7 @@ html {
   height: 100%;
   background: #0b454d;
   animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-  animation-delay: 1s; }
+  animation-delay: 4s; }
 
 /* - LAYOUT FOLDER FILES - */
 /* ------------------------------------------- */
