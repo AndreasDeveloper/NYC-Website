@@ -15,6 +15,14 @@
     }
 
     @media only screen and (max-width: $bp-small) {
+        margin-bottom: 140rem;
+    }
+
+    @media only screen and (max-width: $bp-vsmall) {
+        margin-bottom: 130rem;
+    }
+
+    @media only screen and (max-width: $bp-vsmall-1) {
         margin-bottom: 135rem;
     }
 }

@@ -3,6 +3,7 @@
 /* ------------------------------------------- */
 
 /* - ABSTRACTS FOLDER FILES - */
+@import "abstracts/_animation.scss";
 @import "abstracts/_variables.scss";
 @import "abstracts/_mixins.scss";
 
@@ -17,6 +18,7 @@
 @import "components/_poi.scss";
 @import "components/_m-poi.scss";
 @import "components/_testimonials.scss";
+@import "components/_text-reveal.scss";
 
 /* - LAYOUT FOLDER FILES - */
 @import "layout/_header.scss";
