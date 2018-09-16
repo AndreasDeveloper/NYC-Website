@@ -697,8 +697,26 @@ html {
 /* ------------------------------------------- */
 .container-5 {
   display: grid;
-  grid-template-rows: 65vh;
+  grid-template-rows: 80vh;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  @media only screen and (max-width: 62.5em) {
+    .container-5 {
+      margin-bottom: -20rem; } }
+  @media only screen and (max-width: 50em) {
+    .container-5 {
+      margin-bottom: -50rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .container-5 {
+      margin-bottom: 110rem; } }
+  @media only screen and (max-width: 31.25em) {
+    .container-5 {
+      margin-bottom: 80rem; } }
+  @media only screen and (max-width: 28.125em) {
+    .container-5 {
+      margin-bottom: 65rem; } }
+  @media only screen and (max-width: 25em) {
+    .container-5 {
+      margin-bottom: 55rem; } }
 
 .block {
   display: grid;
