@@ -1316,7 +1316,8 @@ html {
         grid-column: 2 / 21; } }
     @media only screen and (max-width: 37.5em) {
       .section-quote__text {
-        font-size: 1.4rem; } }
+        font-size: 1.4rem;
+        padding: 0 6rem; } }
   .section-quote__name {
     font-weight: 300;
     font-family: 'Josefin Sans';
