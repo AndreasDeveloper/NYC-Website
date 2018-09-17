@@ -705,7 +705,8 @@ html {
       margin-bottom: -20rem; } }
   @media only screen and (max-width: 50em) {
     .container-5 {
-      margin-bottom: -50rem; } }
+      margin-bottom: -50rem;
+      padding-right: 5rem; } }
   @media only screen and (max-width: 37.5em) {
     .container-5 {
       margin-bottom: 110rem; } }
@@ -747,6 +748,9 @@ html {
     @media only screen and (max-width: 62.5em) {
       .block--1 {
         grid-column: 2 / 6; } }
+    @media only screen and (max-width: 50em) {
+      .block--1 {
+        grid-column: 2 / 5; } }
     @media only screen and (max-width: 37.5em) {
       .block--1 {
         grid-column: 5 / 10; } }
@@ -775,6 +779,9 @@ html {
     @media only screen and (max-width: 62.5em) {
       .block--2 {
         grid-column: 5 / 10; } }
+    @media only screen and (max-width: 50em) {
+      .block--2 {
+        grid-column: 5 / 9; } }
     @media only screen and (max-width: 37.5em) {
       .block--2 {
         grid-row: 4 / 11;
@@ -805,6 +812,9 @@ html {
     @media only screen and (max-width: 62.5em) {
       .block--3 {
         grid-column: 9 / 14; } }
+    @media only screen and (max-width: 50em) {
+      .block--3 {
+        grid-column: 9 / 13; } }
     @media only screen and (max-width: 37.5em) {
       .block--3 {
         grid-column: 5 / 10;
@@ -834,6 +844,9 @@ html {
     @media only screen and (max-width: 62.5em) {
       .block--4 {
         grid-column: 13 / 18; } }
+    @media only screen and (max-width: 50em) {
+      .block--4 {
+        grid-column: 13 / 17; } }
     @media only screen and (max-width: 37.5em) {
       .block--4 {
         grid-row: 16 / 23;
@@ -864,6 +877,9 @@ html {
     @media only screen and (max-width: 62.5em) {
       .block--5 {
         grid-column: 2 / 6; } }
+    @media only screen and (max-width: 50em) {
+      .block--5 {
+        grid-column: 2 / 5; } }
     @media only screen and (max-width: 37.5em) {
       .block--5 {
         grid-column: 4 / 11;
@@ -884,7 +900,8 @@ html {
     grid-column: 9 / 15;
     justify-self: center;
     align-self: center;
-    padding: 0 1.5rem; }
+    padding: 0 1.5rem;
+    padding-top: 2rem; }
     @media only screen and (max-width: 86.875em) {
       .block--6 {
         grid-column: 8 / 14; } }
@@ -894,6 +911,9 @@ html {
     @media only screen and (max-width: 62.5em) {
       .block--6 {
         grid-column: 5 / 10; } }
+    @media only screen and (max-width: 50em) {
+      .block--6 {
+        grid-column: 5 / 9; } }
     @media only screen and (max-width: 37.5em) {
       .block--6 {
         grid-column: 5 / 10;
@@ -923,6 +943,9 @@ html {
     @media only screen and (max-width: 62.5em) {
       .block--7 {
         grid-column: 9 / 14; } }
+    @media only screen and (max-width: 50em) {
+      .block--7 {
+        grid-column: 9 / 13; } }
     @media only screen and (max-width: 37.5em) {
       .block--7 {
         grid-column: 4 / 11;
@@ -943,7 +966,8 @@ html {
     grid-column: 19 / 25;
     justify-self: center;
     align-self: center;
-    padding: 0 1.5rem; }
+    padding: 0 1.5rem;
+    padding-top: 2rem; }
     @media only screen and (max-width: 86.875em) {
       .block--8 {
         grid-column: 18 / 24; } }
@@ -953,6 +977,9 @@ html {
     @media only screen and (max-width: 62.5em) {
       .block--8 {
         grid-column: 13 / 18; } }
+    @media only screen and (max-width: 50em) {
+      .block--8 {
+        grid-column: 13 / 17; } }
     @media only screen and (max-width: 37.5em) {
       .block--8 {
         grid-column: 5 / 10;
@@ -1159,7 +1186,7 @@ html {
   position: fixed;
   top: 6.5rem;
   right: 6.5rem;
-  background-image: radial-gradient(#09383E, #051d20);
+  background-image: radial-gradient(rgba(9, 56, 62, 0.9), rgba(5, 29, 32, 0.9));
   z-index: 1000;
   -webkit-transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
@@ -1304,7 +1331,8 @@ html {
 .section-quote {
   display: grid;
   grid-template-rows: repeat(6, 5vw);
-  grid-template-columns: repeat(24, 5vw); }
+  grid-template-columns: repeat(24, 5vw);
+  overflow-x: hidden; }
   .section-quote__text {
     font-weight: 300;
     font-size: 3.6rem;
@@ -1334,7 +1362,6 @@ html {
         font-size: 1.3rem;
         grid-column: 10 / 14; } }
   .section-quote__img {
-    overflow: hidden;
     display: grid;
     grid-row: 4 / 9;
     grid-column: 14 / -1; }
