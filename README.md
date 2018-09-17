@@ -2,7 +2,7 @@
 
 <b>SUMMARY</b>
 
-- This website is a small guide to NYC for new icoming tourists. Website aims to provide services around the city (Such as taxis, hotel booking, tourist guides, points of interests etc.). 
+- This website is a small guide to NYC for new incoming tourists. Website aims to provide services around the city (Such as taxis, hotel booking, tourist guides, points of interests etc.). 
 
 <b>FOCUS</b>
 
