@@ -66,25 +66,56 @@
         font-weight: 300;
         font-size: 3.6rem;
 
+        // GRID SETUP \\
         display: grid;
         grid-row: 2 / 3;
         grid-column: 4 / 20;
+
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-desktop) {
+            grid-column: 2 / 21;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.4rem;
+        }
     }
 
     &__name {
         font-weight: 300;
         font-family: 'Josefin Sans';
 
+        // GRID SETUP \\
         display: grid;
         grid-row: 3 / 4;
         grid-column: 18 / 21;
         font-size: 1.8rem;
+
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-medium) {
+            grid-row: 5 / 6;
+            grid-column: 2 / 5;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.3rem;
+            grid-column: 10 / 14;
+        }
     }
 
     &__img {
         overflow: hidden;
+
+        // GRID SETUP \\
         display: grid;
         grid-row: 4 / 9;
         grid-column: 14 / -1;
+
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-small) {
+            max-width: 200%;
+            max-height: 200%;
+            grid-column: 1 / -1;
+        }
     }
 }
